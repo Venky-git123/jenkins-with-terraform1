@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/devops-v-cloud/Mario-EKS-TF.git'
+                git branch: 'main', url: 'https://github.com/Venky-git123/jenkins-with-terraform1.git'
             }
         }
         stage('Terraform init') {
