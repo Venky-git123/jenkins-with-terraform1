@@ -41,7 +41,7 @@ resource "aws_eks_cluster" "cluster" {
   role_arn = aws_iam_role.eks_role.arn
 
   vpc_config {
-    subnet_ids = ["subnet-055701dd8f47d721d","subnet-0f102295bb3d2a8f6","subnet-0a235b32bf4409266"]
+    subnet_ids = ["subnet-0234f7eaa792bf17d","subnet-072f94eb15dfd4589","subnet-09e55b2412f7e24e4"]
   }
   depends_on = [aws_iam_role_policy_attachment.AmazonPolicy]
 }
@@ -84,7 +84,7 @@ resource "aws_eks_node_group" "nodegroup" {
   cluster_name    = aws_eks_cluster.cluster.name
   node_group_name = "Node-Cloud"
   node_role_arn   = aws_iam_role.noderole.arn
-  subnet_ids      = ["subnet-055701dd8f47d721d","subnet-0f102295bb3d2a8f6","subnet-0a235b32bf4409266"]
+  subnet_ids      = ["subnet-0234f7eaa792bf17d","subnet-072f94eb15dfd4589","subnet-09e55b2412f7e24e4""]
   scaling_config {
     desired_size = 1
     min_size     = 1
